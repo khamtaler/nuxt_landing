@@ -1,11 +1,11 @@
 <template>
 	<main class="mainContainer">
-		<section class="introContainer">
+		<section class="intro">
 			<Navbar />
-			<div class="container introContainer__inner">
-				<div class="introContainer__inner--left">
+			<div class="container intro__inner">
+				<div class="intro__inner--left">
 					<h1>Product Design Course</h1>
-					<h2 :style="{ backgroundImage: `url(${backgroundUrl})` }">Product Factory</h2>
+					<h2 :style="{ backgroundImage: `url(${productDesignSectionImg})` }">Product Factory</h2>
 					<p>
 						Learn how design thinking, user research, <br />
 						business vision and marketing, and finally designing and creating real digital products
@@ -19,16 +19,19 @@
 			</div>
 		</section>
 		<section class="courseExperience">
-			<div></div>
+			<div class="container courseExperience__inner">
+				<h3 :style="{ backgroundImage: `url(${courseExperience})` }">Course Experience</h3>
+			</div>
 		</section>
 	</main>
 </template>
 
 <script>
-import backgroundUrl from '~/assets/images/UIUX.png';
+import productDesignSectionImg from '~/assets/images/UIUX.png';
+import courseExperience from '~/assets/images/Experience.png';
 export default {
 	data() {
-		return { backgroundUrl };
+		return { productDesignSectionImg, courseExperience };
 	},
 };
 </script>
@@ -39,8 +42,9 @@ export default {
 	margin: auto;
 	background: #fff;
 	width: 100%;
+	border-radius: 30px;
 }
-.introContainer {
+.intro {
 	height: 780px;
 	margin: auto;
 	position: relative;
@@ -56,7 +60,6 @@ export default {
 		align-items: center;
 		justify-content: space-around;
 		background: #fff;
-		border-radius: 30px;
 
 		div {
 			width: 42%;
@@ -98,6 +101,29 @@ export default {
 	background: $orange;
 	border: none;
 	border-radius: 16px;
+}
+
+.courseExperience {
+	padding-top: 200px;
+	background: #fafafa;
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-top: 20px;
+	}
+	h3 {
+		display: inline-block;
+		text-align: center;
+		font-size: 32px;
+		line-height: 43px;
+		padding: 66px 169px 50px;
+		font-weight: 700px;
+		color: #000;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 }
 
 @media only screen and (max-width: 1200px) {
