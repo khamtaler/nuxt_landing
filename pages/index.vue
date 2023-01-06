@@ -18,7 +18,9 @@
 				</div>
 			</div>
 		</section>
-		<section style="background: #fafafa"></section>
+		<section class="courseExperience">
+			<div></div>
+		</section>
 	</main>
 </template>
 
@@ -32,6 +34,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+	max-width: 1460px;
+	margin: auto;
+	background: #fff;
+	width: 100%;
+}
 .introContainer {
 	height: 780px;
 	margin: auto;
@@ -49,8 +57,12 @@ export default {
 		justify-content: space-around;
 		background: #fff;
 		border-radius: 30px;
+
 		div {
 			width: 42%;
+		}
+		img {
+			width: 100%;
 		}
 	}
 
@@ -87,10 +99,10 @@ export default {
 	border: none;
 	border-radius: 16px;
 }
-.container {
-	max-width: 1460px;
-	margin: auto;
-	background: #fff;
-	width: 100%;
+
+@media only screen and (max-width: 1200px) {
+	.introContainer__inner {
+		max-width: 1000px;
+	}
 }
 </style>
