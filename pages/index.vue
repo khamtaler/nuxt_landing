@@ -13,7 +13,7 @@
 					</p>
 					<button class="button button__register">Start Register</button>
 				</div>
-				<div>
+				<div class="intro__inner--right">
 					<img src="../assets/images/kia ux course.png" />
 				</div>
 			</div>
@@ -21,6 +21,52 @@
 		<section class="courseExperience">
 			<div class="container courseExperience__inner">
 				<h3 :style="{ backgroundImage: `url(${courseExperience})` }">Course Experience</h3>
+				<Tabs :tabList="tabList" class="tabs">
+					<template v-slot:tabPanel-1>
+						<div class="tabs__content">
+							<img src="../assets/images/Group 468.png" />
+							<div>
+								<p>
+									This course has been attempted by zero people who are eager to learn product
+									design, especially user experience and user interface, so it is not a
+									prerequisite, but due to the limited capacity of the priority course with early
+									enrolled people, others can participate in future courses. .<br />
+									 Obviously, the ability to use tools like Adobe Photoshop and Adobe Illustrator as
+									well as Microsoft Word, Excel tools, and of course a lot of enthusiasm and energy,
+								</p>
+							</div>
+						</div></template
+					>
+					<template v-slot:tabPanel-2>
+						<div class="tabs__content">
+							<div>
+								<p>
+									This course has been attempted by zero people who are eager to learn product
+									design, especially user experience and user interface, so it is not a
+									prerequisite, but due to the limited capacity of the priority course with early
+									enrolled people, others can participate in future courses. . <br /> Obviously, the
+									ability to use tools like Adobe Photoshop and Adobe Illustrator as well as
+									Microsoft Word, Excel tools, and of course a lot of enthusiasm and energy,
+								</p>
+							</div>
+							<img src="../assets/images/Group 468.png" /></div
+					></template>
+					<template v-slot:tabPanel-3>
+						<div class="tabs__content">
+							<img src="../assets/images/Group 468.png" />
+							<div>
+								<p>
+									This course has been attempted by zero people who are eager to learn product
+									design, especially user experience and user interface, so it is not a
+									prerequisite, but due to the limited capacity of the priority course with early
+									enrolled people, others can participate in future courses. .<br />
+									 Obviously, the ability to use tools like Adobe Photoshop and Adobe Illustrator as
+									well as Microsoft Word, Excel tools, and of course a lot of enthusiasm and energy,
+								</p>
+							</div>
+						</div>
+					</template>
+				</Tabs>
 			</div>
 		</section>
 	</main>
@@ -29,9 +75,19 @@
 <script>
 import productDesignSectionImg from '~/assets/images/UIUX.png';
 import courseExperience from '~/assets/images/Experience.png';
+import Tabs from '../components/Tabs';
+
 export default {
+	components: {
+		Tabs,
+	},
+
 	data() {
-		return { productDesignSectionImg, courseExperience };
+		return {
+			productDesignSectionImg,
+			courseExperience,
+			tabList: ['After attending the course', 'During the period', 'Before attending the course'],
+		};
 	},
 };
 </script>
@@ -108,6 +164,7 @@ export default {
 	background: #fafafa;
 	&__inner {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		padding-top: 20px;
@@ -117,12 +174,41 @@ export default {
 		text-align: center;
 		font-size: 32px;
 		line-height: 43px;
-		padding: 66px 169px 50px;
+		padding: 70px 169px 44px;
 		font-weight: 700px;
 		color: #000;
 		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;
+	}
+	.tabs {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		margin-top: 50px;
+		&__content {
+			display: flex;
+			width: 85%;
+			gap: 3%;
+			align-items: center;
+			justify-content: space-around;
+			margin: 50px auto;
+
+			img {
+				width: 100%;
+				max-width: 26%;
+				height: auto;
+			}
+			div {
+				width: 60%;
+			}
+			p {
+				font-size: 20px;
+				line-height: 48px;
+			}
+		}
 	}
 }
 
