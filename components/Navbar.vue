@@ -1,3 +1,5 @@
+@import '../assets/scss/variables.scss'
+
 <template>
 	<header>
 		<nav>
@@ -20,4 +22,8 @@
 export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+nav {
+	background: $orange;
+}
+</style>
