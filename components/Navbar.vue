@@ -3,7 +3,7 @@
 <template>
 	<header>
 		<nav>
-			<NuxtLink to="/"><img src="#" /></NuxtLink>
+			<NuxtLink to="/"><img src="../assets/images/logo.png" /></NuxtLink>
 			<ul>
 				<li><NuxtLink to="/">Projects</NuxtLink></li>
 				<li><NuxtLink to="/">Partners</NuxtLink></li>
