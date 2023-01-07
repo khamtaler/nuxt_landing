@@ -384,10 +384,17 @@ export default {
 		}
 	}
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
 	.courseExperience {
 		h3 {
 			padding: 30px 40px 20px;
+		}
+	}
+}
+@media only screen and (max-width: 400px) {
+	.courseExperience {
+		h3 {
+			padding: 15px 0px 11px;
 		}
 	}
 }
