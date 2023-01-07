@@ -96,7 +96,7 @@ export default {};
 				flex-direction: column;
 				position: absolute;
 				z-index: 999999;
-				background: black;
+				background: #111;
 				top: 0px;
 				left: 0;
 				gap: 20px;
