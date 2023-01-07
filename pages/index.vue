@@ -20,7 +20,7 @@
 		</section>
 		<section class="courseExperience">
 			<div class="container courseExperience__inner">
-				<h3 :style="{ backgroundImage: `url(${courseExperience})` }">Course Experience</h3>
+				<h3 :style="{ backgroundImage: `url(${courseExperienceImg})` }">Course Experience</h3>
 				<Tabs :tabList="tabList" class="tabs">
 					<template v-slot:tabPanel-1>
 						<div class="tabs__content">
@@ -69,12 +69,29 @@
 				</Tabs>
 			</div>
 		</section>
+		<section :style="{ backgroundImage: `url(${requestHeadingsImg})` }" class="requestHeadings">
+			<div class="container requestHeadings__inner">
+				<div>
+					<h3>Request a list of headings</h3>
+					<p>
+						Please enter your email address to receive course titles, the topics will be emailed to
+						you.
+					</p>
+					<input id="NewsletterInput" type="email" placeholder="email" />
+				</div>
+				<p class="gray">
+					<img src="../assets/images/acceptanceIcon.svg" alt="" /> Your email has been successfully
+					registered, headlines will be sent to you soon.
+				</p>
+			</div>
+		</section>
 	</main>
 </template>
 
 <script>
 import productDesignSectionImg from '~/assets/images/UIUX.png';
-import courseExperience from '~/assets/images/Experience.png';
+import courseExperienceImg from '~/assets/images/Experience.png';
+import requestHeadingsImg from '~/assets/images/NewsletterBg.png';
 import Tabs from '../components/Tabs';
 
 export default {
@@ -85,7 +102,8 @@ export default {
 	data() {
 		return {
 			productDesignSectionImg,
-			courseExperience,
+			courseExperienceImg,
+			requestHeadingsImg,
 			tabList: ['After attending the course', 'During the period', 'Before attending the course'],
 		};
 	},
@@ -94,12 +112,16 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	max-width: 1460px;
 	margin: auto;
 	background: #fff;
 	width: 100%;
 	border-radius: 30px;
 }
+
 .intro {
 	height: 780px;
 	margin: auto;
@@ -112,13 +134,10 @@ export default {
 		top: 159px;
 		left: 50%;
 		transform: translateX(-50%);
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
 		background: #fff;
-
+		gap: 5%;
 		div {
-			width: 42%;
+			width: 40%;
 		}
 		img {
 			width: 100%;
@@ -128,7 +147,6 @@ export default {
 	h1 {
 		font-size: 50px;
 		line-height: 67px;
-		font-family: 'Product Sans';
 	}
 	h2 {
 		font-size: 38px;
@@ -152,21 +170,21 @@ export default {
 	color: #fff;
 	text-align: center;
 	font-size: 24px;
-	font-weight: 700;
 	line-height: 32px;
 	background: $orange;
 	border: none;
 	border-radius: 16px;
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .courseExperience {
 	padding-top: 200px;
+	padding-bottom: 50px;
 	background: #fafafa;
 	&__inner {
-		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
 		padding-top: 20px;
 	}
 	h3 {
@@ -175,7 +193,6 @@ export default {
 		font-size: 32px;
 		line-height: 43px;
 		padding: 70px 169px 44px;
-		font-weight: 700px;
 		color: #000;
 		background-position: center center;
 		background-size: cover;
@@ -190,10 +207,11 @@ export default {
 		margin-top: 50px;
 		&__content {
 			display: flex;
-			width: 85%;
-			gap: 3%;
 			align-items: center;
 			justify-content: space-around;
+			width: 85%;
+			gap: 3%;
+
 			margin: 50px auto;
 
 			img {
@@ -212,9 +230,165 @@ export default {
 	}
 }
 
+.requestHeadings {
+	background-color: #000;
+	background: #000;
+	background-position: 90%;
+	background-repeat: no-repeat;
+	background-size: 40%;
+	margin-top: 100px;
+	padding: 130px 0px;
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: left;
+		background: unset;
+		color: #fff;
+	}
+	&__inner div {
+		width: 557.5px;
+	}
+	h3 {
+		font-size: 34px;
+		line-height: 46px;
+	}
+	p {
+		font-size: 20px;
+		line-height: 40px;
+		margin: 15px 0px 25px;
+	}
+	input {
+		width: 100%;
+		height: 62px;
+		background: rgba(255, 255, 255, 0.15);
+		border: none;
+		border-radius: 16px;
+		font-size: 22px;
+		line-height: 30px;
+		padding: 0px 30px;
+		color: #fff;
+		&:focus-visible {
+			border: none;
+			outline: none;
+		}
+	}
+	img {
+		width: 27px;
+		height: 27px;
+		margin-bottom: -5px;
+	}
+	p.gray {
+		margin-top: 50px;
+		color: #acacac;
+	}
+}
+
+@media only screen and (max-width: 1460px) {
+	.container {
+		max-width: 1200px;
+	}
+}
 @media only screen and (max-width: 1200px) {
-	.introContainer__inner {
+	.container {
 		max-width: 1000px;
+	}
+	.intro {
+		&__inner {
+			padding: 20px;
+		}
+	}
+	.courseExperience {
+		padding-top: 300px;
+	}
+	.button__register {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 1000px) {
+	.container {
+		max-width: 90%;
+		margin: auto;
+	}
+	.intro {
+		&__inner {
+			height: unset;
+		}
+	}
+}
+@media only screen and (max-width: 768px) {
+	.container {
+		flex-direction: column;
+	}
+	.intro {
+		&__inner {
+			div {
+				width: 90%;
+			}
+			h1 {
+				font-size: 38px;
+				line-height: 55px;
+			}
+			h2 {
+				font-size: 28px;
+				line-height: 42px;
+			}
+			p {
+				font-size: 18px;
+				line-height: 35px;
+			}
+		}
+		img {
+			display: block;
+			width: 60%;
+			margin: 30px auto;
+		}
+		.button__register {
+			display: block;
+			margin: 20px auto;
+		}
+	}
+	.courseExperience {
+		.tabs {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			margin-top: 50px;
+			&__content {
+				flex-direction: column;
+				img {
+					display: block;
+					width: 60%;
+					max-width: unset;
+					margin: 0px auto 30px auto;
+				}
+				div {
+					width: 90%;
+					margin: auto;
+				}
+				p {
+					line-height: 35px;
+				}
+			}
+		}
+		h3 {
+			padding: 40px 50px 20px;
+		}
+	}
+	.requestHeadings {
+		&__inner div {
+			width: 90%;
+			margin: auto;
+		}
+	}
+}
+@media only screen and (max-width: 768px) {
+	.courseExperience {
+		h3 {
+			padding: 30px 40px 20px;
+		}
 	}
 }
 </style>

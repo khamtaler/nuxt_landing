@@ -51,7 +51,9 @@ export default {
 		border-bottom: 1px solid #000000;
 		label {
 			display: inline-block;
+			height: 100%;
 			padding: 15px 79px 19px;
+			text-align: center;
 		}
 		:checked ~ label {
 			background: #000;
@@ -77,6 +79,41 @@ export default {
 
 	&__tab input {
 		display: none;
+	}
+}
+@media only screen and (max-width: 1200px) {
+	.tabsNav {
+		&__tab {
+			label {
+				text-align: center;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 1000px) {
+	.tabsNav {
+		&__tab {
+			label {
+				padding: 20px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 768px) {
+	.tabsNav {
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.tabsNav {
+		&__tab {
+			font-size: 15px;
+			line-height: 17px;
+			label {
+				padding: 15px;
+			}
+		}
 	}
 }
 </style>
