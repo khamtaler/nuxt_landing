@@ -5,10 +5,10 @@
 	src: local('Product Sans Bold'), url(~assets/fonts/Product-Sans-Bold.ttf) format('truetype');
 } */
 
-@font-face {
+/* @font-face {
 	font-family: 'Product Sans';
-	src: local('Product Sans'), url(~assets/fonts/Product_Sans_Bold.ttf) format('truetype');
-}
+	src: local('Product Sans'), url('.........fonts/Product_Sans_Bold.ttf') format('truetype');
+} */
 
 body {
 	font-family: 'Product Sans', sans-serif;

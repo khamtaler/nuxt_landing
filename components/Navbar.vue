@@ -70,10 +70,15 @@ export default {};
 @media only screen and (max-width: 1460px) {
 	.header {
 		max-width: 1200px;
+		.navigation {
+			ul {
+				gap: 40px;
+			}
+		}
 	}
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1240px) {
 	.header {
 		max-width: 1000px;
 		width: 90%;

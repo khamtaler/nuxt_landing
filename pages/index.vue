@@ -288,12 +288,13 @@ export default {
 
 @media only screen and (max-width: 1490px) {
 	.container {
-		max-width: 1170px;
+		max-width: 1200px;
 	}
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1240px) {
 	.container {
-		max-width: 970px;
+		max-width: 1000px;
+		width: 90%;
 	}
 	.intro {
 		&__inner {
@@ -307,7 +308,7 @@ export default {
 		width: 100%;
 	}
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1040px) {
 	.container {
 		max-width: 90%;
 		margin: auto;
