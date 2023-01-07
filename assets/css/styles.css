@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
 
+/* @font-face {
+	font-family: 'Product Sans';
+	src: local('Product Sans Bold'), url(~assets/fonts/Product-Sans-Bold.ttf) format('truetype');
+} */
+
+@font-face {
+	font-family: 'Product Sans';
+	src: local('Product Sans'), url(~assets/fonts/Product_Sans_Bold.ttf) format('truetype');
+}
+
+body {
+	font-family: 'Product Sans', sans-serif;
+}
 * {
-	font-family: 'PT Sans', sans-serif;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;

@@ -146,11 +146,12 @@ export default {
 
 	h1 {
 		font-size: 50px;
-		line-height: 67px;
+		line-height: 61px;
 	}
 	h2 {
 		font-size: 38px;
 		line-height: 51px;
+		font-weight: 400;
 		color: #8d8d8d;
 		padding: 20px 0px 80px 0px;
 		background-position: center center;
@@ -171,14 +172,12 @@ export default {
 	text-align: center;
 	font-size: 24px;
 	line-height: 32px;
+	font-weight: 700;
 	background: $orange;
 	border: none;
 	border-radius: 16px;
 	&:hover {
 		cursor: pointer;
-	}
-	&:focus {
-		background: red;
 	}
 }
 
@@ -195,7 +194,7 @@ export default {
 		text-align: center;
 		font-size: 32px;
 		line-height: 43px;
-		padding: 70px 169px 44px;
+		padding: 82px 183px 48px;
 		color: #000;
 		background-position: center center;
 		background-size: cover;
@@ -287,14 +286,14 @@ export default {
 	}
 }
 
-@media only screen and (max-width: 1460px) {
+@media only screen and (max-width: 1490px) {
 	.container {
-		max-width: 1200px;
+		max-width: 1170px;
 	}
 }
 @media only screen and (max-width: 1200px) {
 	.container {
-		max-width: 1000px;
+		max-width: 970px;
 	}
 	.intro {
 		&__inner {
