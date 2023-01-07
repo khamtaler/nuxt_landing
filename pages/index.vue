@@ -14,7 +14,7 @@
 					<button class="button button__register">Start Register</button>
 				</div>
 				<div class="intro__inner--right">
-					<img src="../assets/images/kia ux course.png" />
+					<img src="../assets/images/kiauxcourse.png" />
 				</div>
 			</div>
 		</section>
@@ -24,7 +24,7 @@
 				<Tabs :tabList="tabList" class="tabs">
 					<template v-slot:tabPanel-1>
 						<div class="tabs__content">
-							<img src="../assets/images/Group 468.png" />
+							<img src="../assets/images/productFactory.png" />
 							<div>
 								<p>
 									This course has been attempted by zero people who are eager to learn product
@@ -49,11 +49,11 @@
 									Microsoft Word, Excel tools, and of course a lot of enthusiasm and energy,
 								</p>
 							</div>
-							<img src="../assets/images/Group 468.png" /></div
+							<img src="../assets/images/productFactory.png" /></div
 					></template>
 					<template v-slot:tabPanel-3>
 						<div class="tabs__content">
-							<img src="../assets/images/Group 468.png" />
+							<img src="../assets/images/productFactory.png" />
 							<div>
 								<p>
 									This course has been attempted by zero people who are eager to learn product
@@ -176,6 +176,9 @@ export default {
 	border-radius: 16px;
 	&:hover {
 		cursor: pointer;
+	}
+	&:focus {
+		background: red;
 	}
 }
 
