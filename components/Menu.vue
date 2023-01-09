@@ -2,9 +2,6 @@
 	<nav class="menu">
 		<ul class="menu__menuList">
 			<li class="menu__menuItem">
-				<NuxtLink class="menu__menuLink" to="/"><img src="../assets/images/logo.png" /></NuxtLink>
-			</li>
-			<li class="menu__menuItem">
 				<NuxtLink class="menu__menuLink" to="/">Projects</NuxtLink>
 			</li>
 			<li class="menu__menuItem">
@@ -33,6 +30,7 @@ export default {};
 
 <style lang="scss" scoped>
 .menu {
+	margin-left: 50px;
 	&__menuList {
 		display: flex;
 		align-items: center;
@@ -57,26 +55,25 @@ export default {};
 }
 @media only screen and (max-width: 1240px) {
 	.menu {
+		display: none;
 		&__menuList {
 			width: 100%;
 			flex-direction: column;
 			position: absolute;
 			z-index: 999999;
 			background: #111;
-			top: 0px;
+			top: 150px;
 			left: 0;
 			gap: 20px;
 		}
 		&__menuItem {
 			padding: 10px;
 		}
-		&__menuList {
-			display: none;
-		}
 	}
 	.menu__mobile {
-		.menu__menuList {
+		.menu {
 			display: flex;
+			width: 100%;
 		}
 		.menu__menuItem:last-child {
 			padding-bottom: 50px;
