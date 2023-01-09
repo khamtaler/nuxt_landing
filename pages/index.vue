@@ -286,7 +286,7 @@ export default {
 	}
 }
 
-@media only screen and (max-width: 1490px) {
+@media only screen and (max-width: 1460px) {
 	.container {
 		max-width: 1200px;
 	}

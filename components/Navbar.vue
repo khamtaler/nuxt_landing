@@ -20,7 +20,7 @@
 		/></NuxtLink>
 
 		<Menu />
-		<button type="button" class="header__registerButton">Register</button>
+		<button type="button" class="button button__registerButton">Register</button>
 	</header>
 </template>
 
@@ -38,17 +38,16 @@ export default {};
 	background: #111111;
 	margin: auto;
 	border: none;
-
-	&__registerButton {
-		width: 150px;
-		height: 51px;
-		margin-left: auto;
-		font-size: 19px;
-		background: rgba(255, 255, 255, 0.1);
-		color: #fff;
-		border-radius: 31px;
-		border: none;
-	}
+}
+.button__registerButton {
+	width: 150px;
+	height: 51px;
+	margin-left: auto;
+	font-size: 19px;
+	background: rgba(255, 255, 255, 0.1);
+	color: #fff;
+	border-radius: 31px;
+	border: none;
 }
 .button__open,
 .button__close {
@@ -66,9 +65,6 @@ export default {};
 		width: 90%;
 		justify-content: space-between;
 
-		&__registerButton {
-			justify-self: right;
-		}
 		&__logoLink {
 			position: absolute;
 			left: 50%;
@@ -114,7 +110,7 @@ export default {};
 	.header__logoImage {
 		width: 90px;
 	}
-	.header__registerButton {
+	.button__registerButton {
 		width: 100px;
 		height: 42px;
 		font-size: 16px;
