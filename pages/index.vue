@@ -11,7 +11,7 @@
 						business vision and marketing, and finally designing and creating real digital products
 						for real users.
 					</p>
-					<button class="button button__register">Start Register</button>
+					<button type="button" class="button button__register">Start Register</button>
 				</div>
 				<div class="intro__inner--right">
 					<img src="../assets/images/kiauxcourse.png" />
