@@ -1,17 +1,9 @@
 <template>
-	<header class="header">
-		<button
-			type="button"
-			class="button button__open"
-			@click="(e) => e.target.parentNode.parentNode.classList.toggle('menu__mobile')"
-		>
+	<header :class="toggle ? 'header menu__mobile' : 'header'">
+		<button type="button" class="button button__open" @click="toggle = true">
 			<img class="button__openIcon" src="../assets/images/Hamburger_icon.svg" />
 		</button>
-		<button
-			type="button"
-			class="button button__close"
-			@click="(e) => e.target.parentNode.parentNode.classList.toggle('menu__mobile')"
-		>
+		<button type="button" class="button button__close" @click="toggle = false">
 			<img class="button__closeIcon" src="../assets/images/close-icon.svg" />
 		</button>
 
@@ -25,14 +17,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+	data() {
+		return { toggle: false };
+	},
+};
 </script>
 
 <style lang="scss" scoped>
 .header {
 	display: flex;
 	align-items: center;
-	// justify-content: space-between;
+	justify-content: space-between;
 	max-width: 1460px;
 	height: 159px;
 	background: #111111;
@@ -82,13 +78,22 @@ export default {};
 		}
 	}
 	.menu__mobile {
+		.menu {
+			display: flex;
+			width: 100%;
+			position: absolute;
+			top: 150px;
+			left: 0px;
+			margin: 0;
+			z-index: 2;
+		}
 		.button__open {
 			display: none;
 		}
 		.button__close {
 			display: block;
 			position: absolute;
-			z-index: 999999999;
+			z-index: 3;
 			color: #fff;
 			background: transparent;
 			border: none;

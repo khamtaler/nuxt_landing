@@ -1,7 +1,7 @@
 <template>
 	<main class="mainContainer">
 		<section class="intro">
-			<Navbar />
+			<Header />
 			<div class="container intro__inner">
 				<div class="intro__inner--left">
 					<h1>Product Design Course</h1>

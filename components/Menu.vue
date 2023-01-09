@@ -59,11 +59,11 @@ export default {};
 		&__menuList {
 			width: 100%;
 			flex-direction: column;
-			position: absolute;
-			z-index: 999999;
+			// position: absolute;
+			// z-index: 999999;
 			background: #111;
-			top: 150px;
-			left: 0;
+			// top: 150px;
+			// left: 0;
 			gap: 20px;
 		}
 		&__menuItem {
