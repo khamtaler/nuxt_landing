@@ -147,6 +147,11 @@ export default {
 		}
 	}
 }
+@media only screen and (max-width: 1000px) {
+	.courseExperience {
+		padding-top: 300px;
+	}
+}
 
 @media only screen and (max-width: 768px) {
 	.courseExperience {
